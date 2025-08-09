@@ -1,0 +1,3 @@
+/home/yhy/code/c++/Caching system/build/CMakeFiles/main.dir
+/home/yhy/code/c++/Caching system/build/CMakeFiles/edit_cache.dir
+/home/yhy/code/c++/Caching system/build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,591 @@
+In file included from /home/yhy/code/c++/Caching system/testAllCachePolicy.cpp:16:
+/home/yhy/code/c++/Caching system/LRU_k.h: In constructor ‘cache_set::HashLru<Key, Value>::HashLru(size_t, int)’:
+/home/yhy/code/c++/Caching system/LRU_k.h:266:46: error: there are no arguments to ‘hardwear_concurrency’ that depend on a template parameter, so a declaration of ‘hardwear_concurrency’ must be available [-fpermissive]
+  266 |     _slice_nums(slice_nums > 0? slice_nums : hardwear_concurrency()){
+      |                                              ^~~~~~~~~~~~~~~~~~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:266:46: note: (if you use ‘-fpermissive’, G++ will accept your code, but allowing the use of an undeclared name is deprecated)
+In file included from /home/yhy/code/c++/Caching system/testAllCachePolicy.cpp:16:
+/home/yhy/code/c++/Caching system/LRU_k.h:268:71: error: expected ‘(’ before ‘_slice_nums’
+  268 |         size_t slice_size = std::ceil(_capacity / static_cast<double> _slice_nums );
+      |                                                                       ^~~~~~~~~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:268:84: error: expected ‘)’ before ‘;’ token
+  268 |         size_t slice_size = std::ceil(_capacity / static_cast<double> _slice_nums );
+      |                                                                                    ^
+/home/yhy/code/c++/Caching system/LRU_k.h:268:38: note: to match this ‘(’
+  268 |         size_t slice_size = std::ceil(_capacity / static_cast<double> _slice_nums );
+      |                                      ^
+/home/yhy/code/c++/Caching system/LRU_k.h: In member function ‘bool cache_set::HashLru<Key, Value>::get(Key, Value)’:
+/home/yhy/code/c++/Caching system/LRU_k.h:282:5: warning: no return statement in function returning non-void [-Wreturn-type]
+  282 |     }
+      |     ^
+In file included from /home/yhy/code/c++/Caching system/testAllCachePolicy.cpp:17:
+/home/yhy/code/c++/Caching system/LFU_v2.h: In member function ‘bool cache_set::Hash_LFU_V2<Key, Value>::get(Key, Value&)’:
+/home/yhy/code/c++/Caching system/LFU_v2.h:289:5: warning: no return statement in function returning non-void [-Wreturn-type]
+  289 |     }
+      |     ^
+In file included from /home/yhy/code/c++/Caching system/./ArcCache/ArcCache.h:8,
+                 from /home/yhy/code/c++/Caching system/testAllCachePolicy.cpp:18:
+/home/yhy/code/c++/Caching system/./ArcCache/ArcLfuSection.h: In member function ‘bool cache_set::ArcLfuSection<Key, Value>::removeFromghost(cache_set::ArcLfuSection<Key, Value>::Node_ptr)’:
+/home/yhy/code/c++/Caching system/./ArcCache/ArcLfuSection.h:202:5: warning: no return statement in function returning non-void [-Wreturn-type]
+  202 |     }
+      |     ^
+In file included from /home/yhy/code/c++/Caching system/testAllCachePolicy.cpp:16:
+/home/yhy/code/c++/Caching system/LRU_k.h: In instantiation of ‘void cache_set::LRU_1<Key, Value>::initialize_list() [with Key = int; Value = std::__cxx11::basic_string<char>]’:
+/home/yhy/code/c++/Caching system/LRU_k.h:64:9:   required from ‘cache_set::LRU_1<Key, Value>::LRU_1(size_t) [with Key = int; Value = std::__cxx11::basic_string<char>; size_t = long unsigned int]’
+/home/yhy/code/c++/Caching system/testAllCachePolicy.cpp:71:46:   required from here
+/home/yhy/code/c++/Caching system/LRU_k.h:120:23: error: ‘using element_type = class cache_set::LRU_Node<int, std::__cxx11::basic_string<char> >’ {aka ‘class cache_set::LRU_Node<int, std::__cxx11::basic_string<char> >’} has no member named ‘_next_’; did you mean ‘std::shared_ptr<cache_set::LRU_Node<int, std::__cxx11::basic_string<char> > > cache_set::LRU_Node<int, std::__cxx11::basic_string<char> >::_next’? (not accessible from this context)
+  120 |         _dummyhead -> _next_ = _dummytail;
+      |         ~~~~~~~~~~~~~~^~~~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:50:37: note: declared private here
+   50 |     shared_ptr<LRU_Node<Key,Value>> _next;
+      |                                     ^~~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:121:23: error: ‘std::weak_ptr<cache_set::LRU_Node<int, std::__cxx11::basic_string<char> > > cache_set::LRU_Node<int, std::__cxx11::basic_string<char> >::_pre’ is private within this context
+  121 |         _dummytail -> _pre = _dummyhead;
+      |         ~~~~~~~~~~~~~~^~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:49:35: note: declared private here
+   49 |     weak_ptr<LRU_Node<Key,Value>> _pre;
+      |                                   ^~~~
+/home/yhy/code/c++/Caching system/LRU_k.h: In instantiation of ‘void cache_set::LRU_1<Key, Value>::initialize_list() [with Key = int; Value = long unsigned int]’:
+/home/yhy/code/c++/Caching system/LRU_k.h:64:9:   required from ‘cache_set::LRU_1<Key, Value>::LRU_1(size_t) [with Key = int; Value = long unsigned int; size_t = long unsigned int]’
+/usr/include/c++/11/bits/unique_ptr.h:962:30:   required from ‘typename std::_MakeUniq<_Tp>::__single_object std::make_unique(_Args&& ...) [with _Tp = cache_set::LRU_1<int, long unsigned int>; _Args = {long unsigned int&}; typename std::_MakeUniq<_Tp>::__single_object = std::unique_ptr<cache_set::LRU_1<int, long unsigned int>, std::default_delete<cache_set::LRU_1<int, long unsigned int> > >]’
+/home/yhy/code/c++/Caching system/LRU_k.h:177:49:   required from ‘cache_set::LRU_k<Key, Value>::LRU_k(size_t, size_t, int) [with Key = int; Value = std::__cxx11::basic_string<char>; size_t = long unsigned int]’
+/home/yhy/code/c++/Caching system/testAllCachePolicy.cpp:75:69:   required from here
+/home/yhy/code/c++/Caching system/LRU_k.h:120:23: error: ‘using element_type = class cache_set::LRU_Node<int, long unsigned int>’ {aka ‘class cache_set::LRU_Node<int, long unsigned int>’} has no member named ‘_next_’; did you mean ‘std::shared_ptr<cache_set::LRU_Node<int, long unsigned int> > cache_set::LRU_Node<int, long unsigned int>::_next’? (not accessible from this context)
+  120 |         _dummyhead -> _next_ = _dummytail;
+      |         ~~~~~~~~~~~~~~^~~~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:50:37: note: declared private here
+   50 |     shared_ptr<LRU_Node<Key,Value>> _next;
+      |                                     ^~~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:121:23: error: ‘std::weak_ptr<cache_set::LRU_Node<int, long unsigned int> > cache_set::LRU_Node<int, long unsigned int>::_pre’ is private within this context
+  121 |         _dummytail -> _pre = _dummyhead;
+      |         ~~~~~~~~~~~~~~^~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:49:35: note: declared private here
+   49 |     weak_ptr<LRU_Node<Key,Value>> _pre;
+      |                                   ^~~~
+/home/yhy/code/c++/Caching system/LRU_k.h: In instantiation of ‘bool cache_set::LRU_1<Key, Value>::get(Key, Value&) [with Key = int; Value = long unsigned int]’:
+/home/yhy/code/c++/Caching system/LRU_k.h:92:10:   required from here
+/home/yhy/code/c++/Caching system/LRU_k.h:98:34: error: ‘using element_type = class cache_set::LRU_Node<int, long unsigned int>’ {aka ‘class cache_set::LRU_Node<int, long unsigned int>’} has no member named ‘getVal’; did you mean ‘get_val’?
+   98 |             val = Lru_list[key]->getVal();
+      |                   ~~~~~~~~~~~~~~~^~~~~~
+      |                   get_val
+/home/yhy/code/c++/Caching system/LRU_k.h: In instantiation of ‘void cache_set::LRU_k<Key, Value>::put(Key, Value) [with Key = int; Value = std::__cxx11::basic_string<char>]’:
+/home/yhy/code/c++/Caching system/LRU_k.h:227:10:   required from here
+/home/yhy/code/c++/Caching system/LRU_k.h:233:31: error: ‘updateExistingNode’ was not declared in this scope, and no declarations were found by argument-dependent lookup at the point of instantiation [-fpermissive]
+  233 |             updateExistingNode(key,value);
+      |             ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:233:31: note: declarations in dependent base ‘cache_set::LRU_1<int, std::__cxx11::basic_string<char> >’ are not found by unqualified lookup
+/home/yhy/code/c++/Caching system/LRU_k.h:233:31: note: use ‘this->updateExistingNode’ instead
+/home/yhy/code/c++/Caching system/LRU_k.h:233:32: error: cannot convert ‘int’ to ‘cache_set::LRU_1<int, std::__cxx11::basic_string<char> >::node_ptr’ {aka ‘std::shared_ptr<cache_set::LRU_Node<int, std::__cxx11::basic_string<char> > >’}
+  233 |             updateExistingNode(key,value);
+      |                                ^~~
+      |                                |
+      |                                int
+/home/yhy/code/c++/Caching system/LRU_k.h:124:38: note:   initializing argument 1 of ‘void cache_set::LRU_1<Key, Value>::updateExistingNode(cache_set::LRU_1<Key, Value>::node_ptr, Value&) [with Key = int; Value = std::__cxx11::basic_string<char>; cache_set::LRU_1<Key, Value>::node_ptr = std::shared_ptr<cache_set::LRU_Node<int, std::__cxx11::basic_string<char> > >]’
+  124 |     void updateExistingNode(node_ptr node,Value & value){
+      |                             ~~~~~~~~~^~~~
+/home/yhy/code/c++/Caching system/LRU_k.h: In instantiation of ‘Value cache_set::LRU_k<Key, Value>::get(Key) [with Key = int; Value = std::__cxx11::basic_string<char>]’:
+/home/yhy/code/c++/Caching system/LRU_k.h:180:11:   required from here
+/home/yhy/code/c++/Caching system/LRU_k.h:197:38: error: base operand of ‘->’ has non-pointer type ‘std::unordered_map<int, std::__cxx11::basic_string<char>, std::hash<int>, std::equal_to<int>, std::allocator<std::pair<const int, std::__cxx11::basic_string<char> > > >::mapped_type’ {aka ‘std::__cxx11::basic_string<char>’}
+  197 |                 Value stored_value = _history_val_map[key]->_val;
+      |                                      ^~~~~~~~~~~~~~~~
+/home/yhy/code/c++/Caching system/LRU_k.h: In instantiation of ‘bool cache_set::LRU_1<Key, Value>::get(Key, Value&) [with Key = int; Value = std::__cxx11::basic_string<char>]’:
+/home/yhy/code/c++/Caching system/LRU_k.h:92:10:   required from here
+/home/yhy/code/c++/Caching system/LRU_k.h:98:34: error: ‘using element_type = class cache_set::LRU_Node<int, std::__cxx11::basic_string<char> >’ {aka ‘class cache_set::LRU_Node<int, std::__cxx11::basic_string<char> >’} has no member named ‘getVal’; did you mean ‘get_val’?
+   98 |             val = Lru_list[key]->getVal();
+      |                   ~~~~~~~~~~~~~~~^~~~~~
+      |                   get_val
+In file included from /home/yhy/code/c++/Caching system/testAllCachePolicy.cpp:17:
+/home/yhy/code/c++/Caching system/LFU_v2.h: In instantiation of ‘void cache_set::LFU_V2<Key, Value>::put(Key, Value) [with Key = int; Value = std::__cxx11::basic_string<char>]’:
+/home/yhy/code/c++/Caching system/LFU_v2.h:86:10:   required from here
+/home/yhy/code/c++/Caching system/LFU_v2.h:92:31: error: ‘using element_type = struct cache_set::Fre_List<int, std::__cxx11::basic_string<char> >::Node’ {aka ‘struct cache_set::Fre_List<int, std::__cxx11::basic_string<char> >::Node’} has no member named ‘get_value’; did you mean ‘_value’?
+   92 |             _Node_map[key] -> get_value() = value;
+      |             ~~~~~~~~~~~~~~~~~~^~~~~~~~~
+      |             _value
+In file included from /home/yhy/code/c++/Caching system/testAllCachePolicy.cpp:16:
+/home/yhy/code/c++/Caching system/LRU_k.h: In instantiation of ‘void cache_set::LRU_1<Key, Value>::updateExistingNode(cache_set::LRU_1<Key, Value>::node_ptr, Value&) [with Key = int; Value = long unsigned int; cache_set::LRU_1<Key, Value>::node_ptr = std::shared_ptr<cache_set::LRU_Node<int, long unsigned int> >]’:
+/home/yhy/code/c++/Caching system/LRU_k.h:74:13:   required from ‘void cache_set::LRU_1<Key, Value>::put(Key, Value) [with Key = int; Value = long unsigned int]’
+/home/yhy/code/c++/Caching system/LRU_k.h:69:10:   required from here
+/home/yhy/code/c++/Caching system/LRU_k.h:125:17: error: ‘using element_type = class cache_set::LRU_Node<int, long unsigned int>’ {aka ‘class cache_set::LRU_Node<int, long unsigned int>’} has no member named ‘setVal’; did you mean ‘set_val’?
+  125 |         node -> setVal(value);
+      |         ~~~~~~~~^~~~~~
+      |         set_val
+/home/yhy/code/c++/Caching system/LRU_k.h: In instantiation of ‘void cache_set::LRU_1<Key, Value>::evict_leastRecent() [with Key = int; Value = long unsigned int]’:
+/home/yhy/code/c++/Caching system/LRU_k.h:79:17:   required from ‘void cache_set::LRU_1<Key, Value>::put(Key, Value) [with Key = int; Value = long unsigned int]’
+/home/yhy/code/c++/Caching system/LRU_k.h:69:10:   required from here
+/home/yhy/code/c++/Caching system/LRU_k.h:157:45: error: ‘std::shared_ptr<cache_set::LRU_Node<int, long unsigned int> > cache_set::LRU_Node<int, long unsigned int>::_next’ is private within this context
+  157 |         node_ptr  to_be_pop = _dummyhead -> _next;
+      |                               ~~~~~~~~~~~~~~^~~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:50:37: note: declared private here
+   50 |     shared_ptr<LRU_Node<Key,Value>> _next;
+      |                                     ^~~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:159:29: error: ‘int cache_set::LRU_Node<int, long unsigned int>::_key’ is private within this context
+  159 |         Lru_list[to_be_pop->_key].erase();
+      |                  ~~~~~~~~~~~^~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:44:9: note: declared private here
+   44 |     Key _key;
+      |         ^~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:159:35: error: ‘std::unordered_map<int, std::shared_ptr<cache_set::LRU_Node<int, long unsigned int> >, std::hash<int>, std::equal_to<int>, std::allocator<std::pair<const int, std::shared_ptr<cache_set::LRU_Node<int, long unsigned int> > > > >::mapped_type’ {aka ‘class std::shared_ptr<cache_set::LRU_Node<int, long unsigned int> >’} has no member named ‘erase’
+  159 |         Lru_list[to_be_pop->_key].erase();
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/home/yhy/code/c++/Caching system/LRU_k.h: In instantiation of ‘void cache_set::LRU_1<Key, Value>::add_new_node(const Key&, const Value&) [with Key = int; Value = long unsigned int]’:
+/home/yhy/code/c++/Caching system/LRU_k.h:81:13:   required from ‘void cache_set::LRU_1<Key, Value>::put(Key, Value) [with Key = int; Value = long unsigned int]’
+/home/yhy/code/c++/Caching system/LRU_k.h:69:10:   required from here
+/home/yhy/code/c++/Caching system/LRU_k.h:129:18: error: conversion from ‘<unresolved overloaded function type>’ to non-scalar type ‘cache_set::LRU_1<int, long unsigned int>::node_ptr’ {aka ‘std::shared_ptr<cache_set::LRU_Node<int, long unsigned int> >’} requested
+  129 |         node_ptr newNode = make_shared<Key(),Value()>;
+      |                  ^~~~~~~
+/home/yhy/code/c++/Caching system/LRU_k.h: In instantiation of ‘void cache_set::LRU_1<Key, Value>::updateExistingNode(cache_set::LRU_1<Key, Value>::node_ptr, Value&) [with Key = int; Value = std::__cxx11::basic_string<char>; cache_set::LRU_1<Key, Value>::node_ptr = std::shared_ptr<cache_set::LRU_Node<int, std::__cxx11::basic_string<char> > >]’:
+/home/yhy/code/c++/Caching system/LRU_k.h:233:31:   required from ‘void cache_set::LRU_k<Key, Value>::put(Key, Value) [with Key = int; Value = std::__cxx11::basic_string<char>]’
+/home/yhy/code/c++/Caching system/LRU_k.h:227:10:   required from here
+/home/yhy/code/c++/Caching system/LRU_k.h:125:17: error: ‘using element_type = class cache_set::LRU_Node<int, std::__cxx11::basic_string<char> >’ {aka ‘class cache_set::LRU_Node<int, std::__cxx11::basic_string<char> >’} has no member named ‘setVal’; did you mean ‘set_val’?
+  125 |         node -> setVal(value);
+      |         ~~~~~~~~^~~~~~
+      |         set_val
+In file included from /home/yhy/code/c++/Caching system/./ArcCache/ArcCache.h:9,
+                 from /home/yhy/code/c++/Caching system/testAllCachePolicy.cpp:18:
+/home/yhy/code/c++/Caching system/./ArcCache/ArcLruSection.h: In instantiation of ‘void cache_set::ArcLruSection<Key, Value>::put(const Key&, const Value&) [with Key = int; Value = std::__cxx11::basic_string<char>]’:
+/home/yhy/code/c++/Caching system/./ArcCache/ArcCache.h:30:24:   required from ‘void cache_set::ArcCache<Key, Value>::put(Key, Value) [with Key = int; Value = std::__cxx11::basic_string<char>]’
+/home/yhy/code/c++/Caching system/./ArcCache/ArcCache.h:24:10:   required from here
+/home/yhy/code/c++/Caching system/./ArcCache/ArcLruSection.h:29:26: error: ‘std::unordered_map<int, std::shared_ptr<cache_set::ArcCacheNode<int, std::__cxx11::basic_string<char> > >, std::hash<int>, std::equal_to<int>, std::allocator<std::pair<const int, std::shared_ptr<cache_set::ArcCacheNode<int, std::__cxx11::basic_string<char> > > > > >::mapped_type’ {aka ‘class std::shared_ptr<cache_set::ArcCacheNode<int, std::__cxx11::basic_string<char> > >’} has no member named ‘find’
+   29 |         if(lru_list[key].find()!=lru_list.end()){
+      |            ~~~~~~~~~~~~~~^~~~
+/home/yhy/code/c++/Caching system/./ArcCache/ArcLruSection.h:31:31: error: cannot convert ‘const int’ to ‘cache_set::ArcLruSection<int, std::__cxx11::basic_string<char> >::Node_ptr’ {aka ‘std::shared_ptr<cache_set::ArcCacheNode<int, std::__cxx11::basic_string<char> > >’}
+   31 |             updateExsitingNode(key,value);
+      |             ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+/home/yhy/code/c++/Caching system/./ArcCache/ArcLruSection.h:112:39: note:   initializing argument 1 of ‘bool cache_set::ArcLruSection<Key, Value>::updateExsitingNode(cache_set::ArcLruSection<Key, Value>::Node_ptr, const Value&) [with Key = int; Value = std::__cxx11::basic_string<char>; cache_set::ArcLruSection<Key, Value>::Node_ptr = std::shared_ptr<cache_set::ArcCacheNode<int, std::__cxx11::basic_string<char> > >]’
+  112 |     bool  updateExsitingNode(Node_ptr node,const Value &value){
+      |                              ~~~~~~~~~^~~~
+/home/yhy/code/c++/Caching system/./ArcCache/ArcLruSection.h: In instantiation of ‘bool cache_set::ArcLruSection<Key, Value>::get(Key, Value&, bool&) [with Key = int; Value = std::__cxx11::basic_string<char>]’:
+/home/yhy/code/c++/Caching system/./ArcCache/ArcCache.h:43:29:   required from ‘bool cache_set::ArcCache<Key, Value>::get(Key, Value&) [with Key = int; Value = std::__cxx11::basic_string<char>]’
+/home/yhy/code/c++/Caching system/./ArcCache/ArcCache.h:37:10:   required from here
+/home/yhy/code/c++/Caching system/./ArcCache/ArcLruSection.h:48:26: error: ‘std::unordered_map<int, std::shared_ptr<cache_set::ArcCacheNode<int, std::__cxx11::basic_string<char> > >, std::hash<int>, std::equal_to<int>, std::allocator<std::pair<const int, std::shared_ptr<cache_set::ArcCacheNode<int, std::__cxx11::basic_string<char> > > > > >::mapped_type’ {aka ‘class std::shared_ptr<cache_set::ArcCacheNode<int, std::__cxx11::basic_string<char> > >’} has no member named ‘find’
+   48 |         if(lru_list[key].find()!=lru_list.end()){
+      |            ~~~~~~~~~~~~~~^~~~
+/home/yhy/code/c++/Caching system/./ArcCache/ArcLruSection.h:50:37: error: ‘std::unordered_map<int, std::shared_ptr<cache_set::ArcCacheNode<int, std::__cxx11::basic_string<char> > >, std::hash<int>, std::equal_to<int>, std::allocator<std::pair<const int, std::shared_ptr<cache_set::ArcCacheNode<int, std::__cxx11::basic_string<char> > > > > >::mapped_type’ {aka ‘class std::shared_ptr<cache_set::ArcCacheNode<int, std::__cxx11::basic_string<char> > >’} has no member named ‘find’
+   50 |             auto it = lru_list[key].find();
+      |                       ~~~~~~~~~~~~~~^~~~
+In file included from /home/yhy/code/c++/Caching system/testAllCachePolicy.cpp:16:
+/home/yhy/code/c++/Caching system/LRU_k.h: In instantiation of ‘void cache_set::LRU_1<Key, Value>::evict_leastRecent() [with Key = int; Value = std::__cxx11::basic_string<char>]’:
+/home/yhy/code/c++/Caching system/LRU_k.h:79:17:   required from ‘void cache_set::LRU_1<Key, Value>::put(Key, Value) [with Key = int; Value = std::__cxx11::basic_string<char>]’
+/home/yhy/code/c++/Caching system/LRU_k.h:69:10:   required from here
+/home/yhy/code/c++/Caching system/LRU_k.h:157:45: error: ‘std::shared_ptr<cache_set::LRU_Node<int, std::__cxx11::basic_string<char> > > cache_set::LRU_Node<int, std::__cxx11::basic_string<char> >::_next’ is private within this context
+  157 |         node_ptr  to_be_pop = _dummyhead -> _next;
+      |                               ~~~~~~~~~~~~~~^~~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:50:37: note: declared private here
+   50 |     shared_ptr<LRU_Node<Key,Value>> _next;
+      |                                     ^~~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:159:29: error: ‘int cache_set::LRU_Node<int, std::__cxx11::basic_string<char> >::_key’ is private within this context
+  159 |         Lru_list[to_be_pop->_key].erase();
+      |                  ~~~~~~~~~~~^~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:44:9: note: declared private here
+   44 |     Key _key;
+      |         ^~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:159:35: error: ‘std::unordered_map<int, std::shared_ptr<cache_set::LRU_Node<int, std::__cxx11::basic_string<char> > >, std::hash<int>, std::equal_to<int>, std::allocator<std::pair<const int, std::shared_ptr<cache_set::LRU_Node<int, std::__cxx11::basic_string<char> > > > > >::mapped_type’ {aka ‘class std::shared_ptr<cache_set::LRU_Node<int, std::__cxx11::basic_string<char> > >’} has no member named ‘erase’
+  159 |         Lru_list[to_be_pop->_key].erase();
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/home/yhy/code/c++/Caching system/LRU_k.h: In instantiation of ‘void cache_set::LRU_1<Key, Value>::add_new_node(const Key&, const Value&) [with Key = int; Value = std::__cxx11::basic_string<char>]’:
+/home/yhy/code/c++/Caching system/LRU_k.h:81:13:   required from ‘void cache_set::LRU_1<Key, Value>::put(Key, Value) [with Key = int; Value = std::__cxx11::basic_string<char>]’
+/home/yhy/code/c++/Caching system/LRU_k.h:69:10:   required from here
+/home/yhy/code/c++/Caching system/LRU_k.h:129:18: error: conversion from ‘<unresolved overloaded function type>’ to non-scalar type ‘cache_set::LRU_1<int, std::__cxx11::basic_string<char> >::node_ptr’ {aka ‘std::shared_ptr<cache_set::LRU_Node<int, std::__cxx11::basic_string<char> > >’} requested
+  129 |         node_ptr newNode = make_shared<Key(),Value()>;
+      |                  ^~~~~~~
+/home/yhy/code/c++/Caching system/LRU_k.h: In instantiation of ‘void cache_set::LRU_1<Key, Value>::removeNode(cache_set::LRU_1<Key, Value>::node_ptr) [with Key = int; Value = long unsigned int; cache_set::LRU_1<Key, Value>::node_ptr = std::shared_ptr<cache_set::LRU_Node<int, long unsigned int> >]’:
+/home/yhy/code/c++/Caching system/LRU_k.h:139:9:   required from ‘void cache_set::LRU_1<Key, Value>::move2mostRecent(cache_set::LRU_1<Key, Value>::node_ptr) [with Key = int; Value = long unsigned int; cache_set::LRU_1<Key, Value>::node_ptr = std::shared_ptr<cache_set::LRU_Node<int, long unsigned int> >]’
+/home/yhy/code/c++/Caching system/LRU_k.h:75:13:   required from ‘void cache_set::LRU_1<Key, Value>::put(Key, Value) [with Key = int; Value = long unsigned int]’
+/home/yhy/code/c++/Caching system/LRU_k.h:69:10:   required from here
+/home/yhy/code/c++/Caching system/LRU_k.h:152:17: error: ‘std::shared_ptr<cache_set::LRU_Node<int, long unsigned int> > cache_set::LRU_Node<int, long unsigned int>::_next’ is private within this context
+  152 |         node -> _next.lock() -> _pre = node -> _pre;
+      |         ~~~~~~~~^~~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:50:37: note: declared private here
+   50 |     shared_ptr<LRU_Node<Key,Value>> _next;
+      |                                     ^~~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:152:23: error: ‘class std::shared_ptr<cache_set::LRU_Node<int, long unsigned int> >’ has no member named ‘lock’
+  152 |         node -> _next.lock() -> _pre = node -> _pre;
+      |         ~~~~~~~~~~~~~~^~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:152:48: error: ‘std::weak_ptr<cache_set::LRU_Node<int, long unsigned int> > cache_set::LRU_Node<int, long unsigned int>::_pre’ is private within this context
+  152 |         node -> _next.lock() -> _pre = node -> _pre;
+      |                                        ~~~~~~~~^~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:49:35: note: declared private here
+   49 |     weak_ptr<LRU_Node<Key,Value>> _pre;
+      |                                   ^~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:153:17: error: ‘std::weak_ptr<cache_set::LRU_Node<int, long unsigned int> > cache_set::LRU_Node<int, long unsigned int>::_pre’ is private within this context
+  153 |         node -> _pre.lock() -> _next = node -> _next;
+      |         ~~~~~~~~^~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:49:35: note: declared private here
+   49 |     weak_ptr<LRU_Node<Key,Value>> _pre;
+      |                                   ^~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:153:32: error: ‘std::shared_ptr<cache_set::LRU_Node<int, long unsigned int> > cache_set::LRU_Node<int, long unsigned int>::_next’ is private within this context
+  153 |         node -> _pre.lock() -> _next = node -> _next;
+      |         ~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:50:37: note: declared private here
+   50 |     shared_ptr<LRU_Node<Key,Value>> _next;
+      |                                     ^~~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:153:48: error: ‘std::shared_ptr<cache_set::LRU_Node<int, long unsigned int> > cache_set::LRU_Node<int, long unsigned int>::_next’ is private within this context
+  153 |         node -> _pre.lock() -> _next = node -> _next;
+      |                                        ~~~~~~~~^~~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:50:37: note: declared private here
+   50 |     shared_ptr<LRU_Node<Key,Value>> _next;
+      |                                     ^~~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:154:17: error: ‘std::shared_ptr<cache_set::LRU_Node<int, long unsigned int> > cache_set::LRU_Node<int, long unsigned int>::_next’ is private within this context
+  154 |         node -> _next = nullptr;
+      |         ~~~~~~~~^~~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:50:37: note: declared private here
+   50 |     shared_ptr<LRU_Node<Key,Value>> _next;
+      |                                     ^~~~~
+/home/yhy/code/c++/Caching system/LRU_k.h: In instantiation of ‘void cache_set::LRU_1<Key, Value>::insertNode(cache_set::LRU_1<Key, Value>::node_ptr) [with Key = int; Value = long unsigned int; cache_set::LRU_1<Key, Value>::node_ptr = std::shared_ptr<cache_set::LRU_Node<int, long unsigned int> >]’:
+/home/yhy/code/c++/Caching system/LRU_k.h:140:9:   required from ‘void cache_set::LRU_1<Key, Value>::move2mostRecent(cache_set::LRU_1<Key, Value>::node_ptr) [with Key = int; Value = long unsigned int; cache_set::LRU_1<Key, Value>::node_ptr = std::shared_ptr<cache_set::LRU_Node<int, long unsigned int> >]’
+/home/yhy/code/c++/Caching system/LRU_k.h:75:13:   required from ‘void cache_set::LRU_1<Key, Value>::put(Key, Value) [with Key = int; Value = long unsigned int]’
+/home/yhy/code/c++/Caching system/LRU_k.h:69:10:   required from here
+/home/yhy/code/c++/Caching system/LRU_k.h:144:17: error: ‘std::shared_ptr<cache_set::LRU_Node<int, long unsigned int> > cache_set::LRU_Node<int, long unsigned int>::_next’ is private within this context
+  144 |         node -> _next = _dummytail;
+      |         ~~~~~~~~^~~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:50:37: note: declared private here
+   50 |     shared_ptr<LRU_Node<Key,Value>> _next;
+      |                                     ^~~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:145:23: error: ‘std::weak_ptr<cache_set::LRU_Node<int, long unsigned int> > cache_set::LRU_Node<int, long unsigned int>::_pre’ is private within this context
+  145 |         _dummytail -> _pre.lock() -> _next = node;
+      |         ~~~~~~~~~~~~~~^~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:49:35: note: declared private here
+   49 |     weak_ptr<LRU_Node<Key,Value>> _pre;
+      |                                   ^~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:145:38: error: ‘std::shared_ptr<cache_set::LRU_Node<int, long unsigned int> > cache_set::LRU_Node<int, long unsigned int>::_next’ is private within this context
+  145 |         _dummytail -> _pre.lock() -> _next = node;
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:50:37: note: declared private here
+   50 |     shared_ptr<LRU_Node<Key,Value>> _next;
+      |                                     ^~~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:146:17: error: ‘std::weak_ptr<cache_set::LRU_Node<int, long unsigned int> > cache_set::LRU_Node<int, long unsigned int>::_pre’ is private within this context
+  146 |         node -> _pre = _dummytail -> _pre;
+      |         ~~~~~~~~^~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:49:35: note: declared private here
+   49 |     weak_ptr<LRU_Node<Key,Value>> _pre;
+      |                                   ^~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:146:38: error: ‘std::weak_ptr<cache_set::LRU_Node<int, long unsigned int> > cache_set::LRU_Node<int, long unsigned int>::_pre’ is private within this context
+  146 |         node -> _pre = _dummytail -> _pre;
+      |                        ~~~~~~~~~~~~~~^~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:49:35: note: declared private here
+   49 |     weak_ptr<LRU_Node<Key,Value>> _pre;
+      |                                   ^~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:147:23: error: ‘std::weak_ptr<cache_set::LRU_Node<int, long unsigned int> > cache_set::LRU_Node<int, long unsigned int>::_pre’ is private within this context
+  147 |         _dummytail -> _pre = node;
+      |         ~~~~~~~~~~~~~~^~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:49:35: note: declared private here
+   49 |     weak_ptr<LRU_Node<Key,Value>> _pre;
+      |                                   ^~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:149:24: error: ‘int cache_set::LRU_Node<int, long unsigned int>::_key’ is private within this context
+  149 |         Lru_list[node->_key] = node -> _val;
+      |                  ~~~~~~^~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:44:9: note: declared private here
+   44 |     Key _key;
+      |         ^~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:149:40: error: ‘long unsigned int cache_set::LRU_Node<int, long unsigned int>::_val’ is private within this context
+  149 |         Lru_list[node->_key] = node -> _val;
+      |                                ~~~~~~~~^~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:45:11: note: declared private here
+   45 |     Value _val;
+      |           ^~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:149:30: error: no match for ‘operator=’ (operand types are ‘std::unordered_map<int, std::shared_ptr<cache_set::LRU_Node<int, long unsigned int> >, std::hash<int>, std::equal_to<int>, std::allocator<std::pair<const int, std::shared_ptr<cache_set::LRU_Node<int, long unsigned int> > > > >::mapped_type’ {aka ‘std::shared_ptr<cache_set::LRU_Node<int, long unsigned int> >’} and ‘long unsigned int’)
+  149 |         Lru_list[node->_key] = node -> _val;
+      |         ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+In file included from /usr/include/c++/11/memory:77,
+                 from /home/yhy/code/c++/Caching system/testAllCachePolicy.cpp:3:
+/usr/include/c++/11/bits/shared_ptr.h:363:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<const std::shared_ptr<_Yp>&> std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Yp>&) [with _Yp = _Yp; _Tp = cache_set::LRU_Node<int, long unsigned int>]’
+  363 |         operator=(const shared_ptr<_Yp>& __r) noexcept
+      |         ^~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:363:9: note:   template argument deduction/substitution failed:
+In file included from /home/yhy/code/c++/Caching system/testAllCachePolicy.cpp:16:
+/home/yhy/code/c++/Caching system/LRU_k.h:149:30: note:   mismatched types ‘const std::shared_ptr<_Tp>’ and ‘long unsigned int’
+  149 |         Lru_list[node->_key] = node -> _val;
+      |         ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+In file included from /usr/include/c++/11/memory:77,
+                 from /home/yhy/code/c++/Caching system/testAllCachePolicy.cpp:3:
+/usr/include/c++/11/bits/shared_ptr.h:374:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::auto_ptr<_Up> > std::shared_ptr<_Tp>::operator=(std::auto_ptr<_Up>&&) [with _Yp = _Yp; _Tp = cache_set::LRU_Node<int, long unsigned int>]’
+  374 |         operator=(auto_ptr<_Yp>&& __r)
+      |         ^~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:374:9: note:   template argument deduction/substitution failed:
+In file included from /home/yhy/code/c++/Caching system/testAllCachePolicy.cpp:16:
+/home/yhy/code/c++/Caching system/LRU_k.h:149:30: note:   mismatched types ‘std::auto_ptr<_Up>’ and ‘long unsigned int’
+  149 |         Lru_list[node->_key] = node -> _val;
+      |         ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+In file included from /usr/include/c++/11/memory:77,
+                 from /home/yhy/code/c++/Caching system/testAllCachePolicy.cpp:3:
+/usr/include/c++/11/bits/shared_ptr.h:391:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::shared_ptr<_Yp> > std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Yp>&&) [with _Yp = _Yp; _Tp = cache_set::LRU_Node<int, long unsigned int>]’
+  391 |         operator=(shared_ptr<_Yp>&& __r) noexcept
+      |         ^~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:391:9: note:   template argument deduction/substitution failed:
+In file included from /home/yhy/code/c++/Caching system/testAllCachePolicy.cpp:16:
+/home/yhy/code/c++/Caching system/LRU_k.h:149:30: note:   mismatched types ‘std::shared_ptr<_Tp>’ and ‘long unsigned int’
+  149 |         Lru_list[node->_key] = node -> _val;
+      |         ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+In file included from /usr/include/c++/11/memory:77,
+                 from /home/yhy/code/c++/Caching system/testAllCachePolicy.cpp:3:
+/usr/include/c++/11/bits/shared_ptr.h:399:9: note: candidate: ‘template<class _Yp, class _Del> std::shared_ptr<_Tp>::_Assignable<std::unique_ptr<_Up, _Ep> > std::shared_ptr<_Tp>::operator=(std::unique_ptr<_Up, _Ep>&&) [with _Yp = _Yp; _Del = _Del; _Tp = cache_set::LRU_Node<int, long unsigned int>]’
+  399 |         operator=(unique_ptr<_Yp, _Del>&& __r)
+      |         ^~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:399:9: note:   template argument deduction/substitution failed:
+In file included from /home/yhy/code/c++/Caching system/testAllCachePolicy.cpp:16:
+/home/yhy/code/c++/Caching system/LRU_k.h:149:30: note:   mismatched types ‘std::unique_ptr<_Tp, _Dp>’ and ‘long unsigned int’
+  149 |         Lru_list[node->_key] = node -> _val;
+      |         ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+In file included from /usr/include/c++/11/memory:77,
+                 from /home/yhy/code/c++/Caching system/testAllCachePolicy.cpp:3:
+/usr/include/c++/11/bits/shared_ptr.h:359:19: note: candidate: ‘std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Tp>&) [with _Tp = cache_set::LRU_Node<int, long unsigned int>]’
+  359 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;
+      |                   ^~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:359:29: note:   no known conversion for argument 1 from ‘long unsigned int’ to ‘const std::shared_ptr<cache_set::LRU_Node<int, long unsigned int> >&’
+  359 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;
+      |                             ^~~~~~~~~~~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:383:7: note: candidate: ‘std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Tp>&&) [with _Tp = cache_set::LRU_Node<int, long unsigned int>]’
+  383 |       operator=(shared_ptr&& __r) noexcept
+      |       ^~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:383:30: note:   no known conversion for argument 1 from ‘long unsigned int’ to ‘std::shared_ptr<cache_set::LRU_Node<int, long unsigned int> >&&’
+  383 |       operator=(shared_ptr&& __r) noexcept
+      |                 ~~~~~~~~~~~~~^~~
+In file included from /home/yhy/code/c++/Caching system/testAllCachePolicy.cpp:16:
+/home/yhy/code/c++/Caching system/LRU_k.h: In instantiation of ‘void cache_set::LRU_1<Key, Value>::removeNode(cache_set::LRU_1<Key, Value>::node_ptr) [with Key = int; Value = std::__cxx11::basic_string<char>; cache_set::LRU_1<Key, Value>::node_ptr = std::shared_ptr<cache_set::LRU_Node<int, std::__cxx11::basic_string<char> > >]’:
+/home/yhy/code/c++/Caching system/LRU_k.h:139:9:   required from ‘void cache_set::LRU_1<Key, Value>::move2mostRecent(cache_set::LRU_1<Key, Value>::node_ptr) [with Key = int; Value = std::__cxx11::basic_string<char>; cache_set::LRU_1<Key, Value>::node_ptr = std::shared_ptr<cache_set::LRU_Node<int, std::__cxx11::basic_string<char> > >]’
+/home/yhy/code/c++/Caching system/LRU_k.h:97:13:   required from ‘bool cache_set::LRU_1<Key, Value>::get(Key, Value&) [with Key = int; Value = std::__cxx11::basic_string<char>]’
+/home/yhy/code/c++/Caching system/LRU_k.h:92:10:   required from here
+/home/yhy/code/c++/Caching system/LRU_k.h:152:17: error: ‘std::shared_ptr<cache_set::LRU_Node<int, std::__cxx11::basic_string<char> > > cache_set::LRU_Node<int, std::__cxx11::basic_string<char> >::_next’ is private within this context
+  152 |         node -> _next.lock() -> _pre = node -> _pre;
+      |         ~~~~~~~~^~~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:50:37: note: declared private here
+   50 |     shared_ptr<LRU_Node<Key,Value>> _next;
+      |                                     ^~~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:152:23: error: ‘class std::shared_ptr<cache_set::LRU_Node<int, std::__cxx11::basic_string<char> > >’ has no member named ‘lock’
+  152 |         node -> _next.lock() -> _pre = node -> _pre;
+      |         ~~~~~~~~~~~~~~^~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:152:48: error: ‘std::weak_ptr<cache_set::LRU_Node<int, std::__cxx11::basic_string<char> > > cache_set::LRU_Node<int, std::__cxx11::basic_string<char> >::_pre’ is private within this context
+  152 |         node -> _next.lock() -> _pre = node -> _pre;
+      |                                        ~~~~~~~~^~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:49:35: note: declared private here
+   49 |     weak_ptr<LRU_Node<Key,Value>> _pre;
+      |                                   ^~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:153:17: error: ‘std::weak_ptr<cache_set::LRU_Node<int, std::__cxx11::basic_string<char> > > cache_set::LRU_Node<int, std::__cxx11::basic_string<char> >::_pre’ is private within this context
+  153 |         node -> _pre.lock() -> _next = node -> _next;
+      |         ~~~~~~~~^~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:49:35: note: declared private here
+   49 |     weak_ptr<LRU_Node<Key,Value>> _pre;
+      |                                   ^~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:153:32: error: ‘std::shared_ptr<cache_set::LRU_Node<int, std::__cxx11::basic_string<char> > > cache_set::LRU_Node<int, std::__cxx11::basic_string<char> >::_next’ is private within this context
+  153 |         node -> _pre.lock() -> _next = node -> _next;
+      |         ~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:50:37: note: declared private here
+   50 |     shared_ptr<LRU_Node<Key,Value>> _next;
+      |                                     ^~~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:153:48: error: ‘std::shared_ptr<cache_set::LRU_Node<int, std::__cxx11::basic_string<char> > > cache_set::LRU_Node<int, std::__cxx11::basic_string<char> >::_next’ is private within this context
+  153 |         node -> _pre.lock() -> _next = node -> _next;
+      |                                        ~~~~~~~~^~~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:50:37: note: declared private here
+   50 |     shared_ptr<LRU_Node<Key,Value>> _next;
+      |                                     ^~~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:154:17: error: ‘std::shared_ptr<cache_set::LRU_Node<int, std::__cxx11::basic_string<char> > > cache_set::LRU_Node<int, std::__cxx11::basic_string<char> >::_next’ is private within this context
+  154 |         node -> _next = nullptr;
+      |         ~~~~~~~~^~~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:50:37: note: declared private here
+   50 |     shared_ptr<LRU_Node<Key,Value>> _next;
+      |                                     ^~~~~
+/home/yhy/code/c++/Caching system/LRU_k.h: In instantiation of ‘void cache_set::LRU_1<Key, Value>::insertNode(cache_set::LRU_1<Key, Value>::node_ptr) [with Key = int; Value = std::__cxx11::basic_string<char>; cache_set::LRU_1<Key, Value>::node_ptr = std::shared_ptr<cache_set::LRU_Node<int, std::__cxx11::basic_string<char> > >]’:
+/home/yhy/code/c++/Caching system/LRU_k.h:140:9:   required from ‘void cache_set::LRU_1<Key, Value>::move2mostRecent(cache_set::LRU_1<Key, Value>::node_ptr) [with Key = int; Value = std::__cxx11::basic_string<char>; cache_set::LRU_1<Key, Value>::node_ptr = std::shared_ptr<cache_set::LRU_Node<int, std::__cxx11::basic_string<char> > >]’
+/home/yhy/code/c++/Caching system/LRU_k.h:97:13:   required from ‘bool cache_set::LRU_1<Key, Value>::get(Key, Value&) [with Key = int; Value = std::__cxx11::basic_string<char>]’
+/home/yhy/code/c++/Caching system/LRU_k.h:92:10:   required from here
+/home/yhy/code/c++/Caching system/LRU_k.h:144:17: error: ‘std::shared_ptr<cache_set::LRU_Node<int, std::__cxx11::basic_string<char> > > cache_set::LRU_Node<int, std::__cxx11::basic_string<char> >::_next’ is private within this context
+  144 |         node -> _next = _dummytail;
+      |         ~~~~~~~~^~~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:50:37: note: declared private here
+   50 |     shared_ptr<LRU_Node<Key,Value>> _next;
+      |                                     ^~~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:145:23: error: ‘std::weak_ptr<cache_set::LRU_Node<int, std::__cxx11::basic_string<char> > > cache_set::LRU_Node<int, std::__cxx11::basic_string<char> >::_pre’ is private within this context
+  145 |         _dummytail -> _pre.lock() -> _next = node;
+      |         ~~~~~~~~~~~~~~^~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:49:35: note: declared private here
+   49 |     weak_ptr<LRU_Node<Key,Value>> _pre;
+      |                                   ^~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:145:38: error: ‘std::shared_ptr<cache_set::LRU_Node<int, std::__cxx11::basic_string<char> > > cache_set::LRU_Node<int, std::__cxx11::basic_string<char> >::_next’ is private within this context
+  145 |         _dummytail -> _pre.lock() -> _next = node;
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:50:37: note: declared private here
+   50 |     shared_ptr<LRU_Node<Key,Value>> _next;
+      |                                     ^~~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:146:17: error: ‘std::weak_ptr<cache_set::LRU_Node<int, std::__cxx11::basic_string<char> > > cache_set::LRU_Node<int, std::__cxx11::basic_string<char> >::_pre’ is private within this context
+  146 |         node -> _pre = _dummytail -> _pre;
+      |         ~~~~~~~~^~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:49:35: note: declared private here
+   49 |     weak_ptr<LRU_Node<Key,Value>> _pre;
+      |                                   ^~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:146:38: error: ‘std::weak_ptr<cache_set::LRU_Node<int, std::__cxx11::basic_string<char> > > cache_set::LRU_Node<int, std::__cxx11::basic_string<char> >::_pre’ is private within this context
+  146 |         node -> _pre = _dummytail -> _pre;
+      |                        ~~~~~~~~~~~~~~^~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:49:35: note: declared private here
+   49 |     weak_ptr<LRU_Node<Key,Value>> _pre;
+      |                                   ^~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:147:23: error: ‘std::weak_ptr<cache_set::LRU_Node<int, std::__cxx11::basic_string<char> > > cache_set::LRU_Node<int, std::__cxx11::basic_string<char> >::_pre’ is private within this context
+  147 |         _dummytail -> _pre = node;
+      |         ~~~~~~~~~~~~~~^~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:49:35: note: declared private here
+   49 |     weak_ptr<LRU_Node<Key,Value>> _pre;
+      |                                   ^~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:149:24: error: ‘int cache_set::LRU_Node<int, std::__cxx11::basic_string<char> >::_key’ is private within this context
+  149 |         Lru_list[node->_key] = node -> _val;
+      |                  ~~~~~~^~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:44:9: note: declared private here
+   44 |     Key _key;
+      |         ^~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:149:40: error: ‘std::__cxx11::basic_string<char> cache_set::LRU_Node<int, std::__cxx11::basic_string<char> >::_val’ is private within this context
+  149 |         Lru_list[node->_key] = node -> _val;
+      |                                ~~~~~~~~^~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:45:11: note: declared private here
+   45 |     Value _val;
+      |           ^~~~
+/home/yhy/code/c++/Caching system/LRU_k.h:149:30: error: no match for ‘operator=’ (operand types are ‘std::unordered_map<int, std::shared_ptr<cache_set::LRU_Node<int, std::__cxx11::basic_string<char> > >, std::hash<int>, std::equal_to<int>, std::allocator<std::pair<const int, std::shared_ptr<cache_set::LRU_Node<int, std::__cxx11::basic_string<char> > > > > >::mapped_type’ {aka ‘std::shared_ptr<cache_set::LRU_Node<int, std::__cxx11::basic_string<char> > >’} and ‘std::__cxx11::basic_string<char>’)
+  149 |         Lru_list[node->_key] = node -> _val;
+      |         ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+In file included from /usr/include/c++/11/memory:77,
+                 from /home/yhy/code/c++/Caching system/testAllCachePolicy.cpp:3:
+/usr/include/c++/11/bits/shared_ptr.h:363:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<const std::shared_ptr<_Yp>&> std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Yp>&) [with _Yp = _Yp; _Tp = cache_set::LRU_Node<int, std::__cxx11::basic_string<char> >]’
+  363 |         operator=(const shared_ptr<_Yp>& __r) noexcept
+      |         ^~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:363:9: note:   template argument deduction/substitution failed:
+In file included from /home/yhy/code/c++/Caching system/testAllCachePolicy.cpp:16:
+/home/yhy/code/c++/Caching system/LRU_k.h:149:30: note:   ‘std::__cxx11::basic_string<char>’ is not derived from ‘const std::shared_ptr<_Tp>’
+  149 |         Lru_list[node->_key] = node -> _val;
+      |         ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+In file included from /usr/include/c++/11/memory:77,
+                 from /home/yhy/code/c++/Caching system/testAllCachePolicy.cpp:3:
+/usr/include/c++/11/bits/shared_ptr.h:374:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::auto_ptr<_Up> > std::shared_ptr<_Tp>::operator=(std::auto_ptr<_Up>&&) [with _Yp = _Yp; _Tp = cache_set::LRU_Node<int, std::__cxx11::basic_string<char> >]’
+  374 |         operator=(auto_ptr<_Yp>&& __r)
+      |         ^~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:374:9: note:   template argument deduction/substitution failed:
+In file included from /home/yhy/code/c++/Caching system/testAllCachePolicy.cpp:16:
+/home/yhy/code/c++/Caching system/LRU_k.h:149:30: note:   ‘std::__cxx11::basic_string<char>’ is not derived from ‘std::auto_ptr<_Up>’
+  149 |         Lru_list[node->_key] = node -> _val;
+      |         ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+In file included from /usr/include/c++/11/memory:77,
+                 from /home/yhy/code/c++/Caching system/testAllCachePolicy.cpp:3:
+/usr/include/c++/11/bits/shared_ptr.h:391:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::shared_ptr<_Yp> > std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Yp>&&) [with _Yp = _Yp; _Tp = cache_set::LRU_Node<int, std::__cxx11::basic_string<char> >]’
+  391 |         operator=(shared_ptr<_Yp>&& __r) noexcept
+      |         ^~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:391:9: note:   template argument deduction/substitution failed:
+In file included from /home/yhy/code/c++/Caching system/testAllCachePolicy.cpp:16:
+/home/yhy/code/c++/Caching system/LRU_k.h:149:30: note:   ‘std::__cxx11::basic_string<char>’ is not derived from ‘std::shared_ptr<_Tp>’
+  149 |         Lru_list[node->_key] = node -> _val;
+      |         ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+In file included from /usr/include/c++/11/memory:77,
+                 from /home/yhy/code/c++/Caching system/testAllCachePolicy.cpp:3:
+/usr/include/c++/11/bits/shared_ptr.h:399:9: note: candidate: ‘template<class _Yp, class _Del> std::shared_ptr<_Tp>::_Assignable<std::unique_ptr<_Up, _Ep> > std::shared_ptr<_Tp>::operator=(std::unique_ptr<_Up, _Ep>&&) [with _Yp = _Yp; _Del = _Del; _Tp = cache_set::LRU_Node<int, std::__cxx11::basic_string<char> >]’
+  399 |         operator=(unique_ptr<_Yp, _Del>&& __r)
+      |         ^~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:399:9: note:   template argument deduction/substitution failed:
+In file included from /home/yhy/code/c++/Caching system/testAllCachePolicy.cpp:16:
+/home/yhy/code/c++/Caching system/LRU_k.h:149:30: note:   ‘std::__cxx11::basic_string<char>’ is not derived from ‘std::unique_ptr<_Tp, _Dp>’
+  149 |         Lru_list[node->_key] = node -> _val;
+      |         ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+In file included from /usr/include/c++/11/memory:77,
+                 from /home/yhy/code/c++/Caching system/testAllCachePolicy.cpp:3:
+/usr/include/c++/11/bits/shared_ptr.h:359:19: note: candidate: ‘std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Tp>&) [with _Tp = cache_set::LRU_Node<int, std::__cxx11::basic_string<char> >]’
+  359 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;
+      |                   ^~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:359:29: note:   no known conversion for argument 1 from ‘std::__cxx11::basic_string<char>’ to ‘const std::shared_ptr<cache_set::LRU_Node<int, std::__cxx11::basic_string<char> > >&’
+  359 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;
+      |                             ^~~~~~~~~~~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:383:7: note: candidate: ‘std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Tp>&&) [with _Tp = cache_set::LRU_Node<int, std::__cxx11::basic_string<char> >]’
+  383 |       operator=(shared_ptr&& __r) noexcept
+      |       ^~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:383:30: note:   no known conversion for argument 1 from ‘std::__cxx11::basic_string<char>’ to ‘std::shared_ptr<cache_set::LRU_Node<int, std::__cxx11::basic_string<char> > >&&’
+  383 |       operator=(shared_ptr&& __r) noexcept
+      |                 ~~~~~~~~~~~~~^~~
+In file included from /home/yhy/code/c++/Caching system/./ArcCache/ArcCache.h:8,
+                 from /home/yhy/code/c++/Caching system/testAllCachePolicy.cpp:18:
+/home/yhy/code/c++/Caching system/./ArcCache/ArcLfuSection.h: In instantiation of ‘bool cache_set::ArcLfuSection<Key, Value>::evict_minFreqNode() [with Key = int; Value = std::__cxx11::basic_string<char>]’:
+/home/yhy/code/c++/Caching system/./ArcCache/ArcLfuSection.h:82:13:   required from ‘bool cache_set::ArcLfuSection<Key, Value>::decrease_capacity() [with Key = int; Value = std::__cxx11::basic_string<char>]’
+/home/yhy/code/c++/Caching system/./ArcCache/ArcCache.h:65:45:   required from ‘bool cache_set::ArcCache<Key, Value>::check_ghost_cache(Key) [with Key = int; Value = std::__cxx11::basic_string<char>]’
+/home/yhy/code/c++/Caching system/./ArcCache/ArcCache.h:26:9:   required from ‘void cache_set::ArcCache<Key, Value>::put(Key, Value) [with Key = int; Value = std::__cxx11::basic_string<char>]’
+/home/yhy/code/c++/Caching system/./ArcCache/ArcCache.h:24:10:   required from here
+/home/yhy/code/c++/Caching system/./ArcCache/ArcLfuSection.h:168:12: error: no match for ‘operator!’ (operand type is ‘std::__cxx11::list<std::shared_ptr<cache_set::ArcCacheNode<int, std::__cxx11::basic_string<char> > >, std::allocator<std::shared_ptr<cache_set::ArcCacheNode<int, std::__cxx11::basic_string<char> > > > >’)
+  168 |         if(!temp || temp.empty()) return false;
+      |            ^~~~~
+/home/yhy/code/c++/Caching system/./ArcCache/ArcLfuSection.h:168:12: note: candidate: ‘operator!(bool)’ (built-in)
+/home/yhy/code/c++/Caching system/./ArcCache/ArcLfuSection.h:168:12: note:   no known conversion for argument 1 from ‘std::__cxx11::list<std::shared_ptr<cache_set::ArcCacheNode<int, std::__cxx11::basic_string<char> > >, std::allocator<std::shared_ptr<cache_set::ArcCacheNode<int, std::__cxx11::basic_string<char> > > > >’ to ‘bool’
+In file included from /home/yhy/code/c++/Caching system/./ArcCache/ArcCache.h:8,
+                 from /home/yhy/code/c++/Caching system/testAllCachePolicy.cpp:18:
+/home/yhy/code/c++/Caching system/./ArcCache/ArcLfuSection.h:172:45: error: ‘std::unordered_map<int, std::shared_ptr<cache_set::ArcCacheNode<int, std::__cxx11::basic_string<char> > >, std::hash<int>, std::equal_to<int>, std::allocator<std::pair<const int, std::shared_ptr<cache_set::ArcCacheNode<int, std::__cxx11::basic_string<char> > > > > >::mapped_type’ {aka ‘class std::shared_ptr<cache_set::ArcCacheNode<int, std::__cxx11::basic_string<char> > >’} has no member named ‘erase’
+  172 |         lfu_list[temp.front() -> get_key()].erase();
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/home/yhy/code/c++/Caching system/./ArcCache/ArcLfuSection.h: In instantiation of ‘bool cache_set::ArcLfuSection<Key, Value>::removeFromghost(cache_set::ArcLfuSection<Key, Value>::Node_ptr) [with Key = int; Value = std::__cxx11::basic_string<char>; cache_set::ArcLfuSection<Key, Value>::Node_ptr = std::shared_ptr<cache_set::ArcCacheNode<int, std::__cxx11::basic_string<char> > >]’:
+/home/yhy/code/c++/Caching system/./ArcCache/ArcLfuSection.h:61:13:   required from ‘bool cache_set::ArcLfuSection<Key, Value>::check_ghost(Key) [with Key = int; Value = std::__cxx11::basic_string<char>]’
+/home/yhy/code/c++/Caching system/./ArcCache/ArcCache.h:71:40:   required from ‘bool cache_set::ArcCache<Key, Value>::check_ghost_cache(Key) [with Key = int; Value = std::__cxx11::basic_string<char>]’
+/home/yhy/code/c++/Caching system/./ArcCache/ArcCache.h:26:9:   required from ‘void cache_set::ArcCache<Key, Value>::put(Key, Value) [with Key = int; Value = std::__cxx11::basic_string<char>]’
+/home/yhy/code/c++/Caching system/./ArcCache/ArcCache.h:24:10:   required from here
+/home/yhy/code/c++/Caching system/./ArcCache/ArcLfuSection.h:199:39: error: no match for ‘operator=’ (operand types are ‘std::shared_ptr<cache_set::ArcCacheNode<int, std::__cxx11::basic_string<char> > >’ and ‘std::weak_ptr<cache_set::ArcCacheNode<int, std::__cxx11::basic_string<char> > >’)
+  199 |             node ->_next->_pre.lock() = node -> _pre;
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+In file included from /usr/include/c++/11/memory:77,
+                 from /home/yhy/code/c++/Caching system/testAllCachePolicy.cpp:3:
+/usr/include/c++/11/bits/shared_ptr.h:363:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<const std::shared_ptr<_Yp>&> std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Yp>&) [with _Yp = _Yp; _Tp = cache_set::ArcCacheNode<int, std::__cxx11::basic_string<char> >]’
+  363 |         operator=(const shared_ptr<_Yp>& __r) noexcept
+      |         ^~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:363:9: note:   template argument deduction/substitution failed:
+In file included from /home/yhy/code/c++/Caching system/./ArcCache/ArcCache.h:8,
+                 from /home/yhy/code/c++/Caching system/testAllCachePolicy.cpp:18:
+/home/yhy/code/c++/Caching system/./ArcCache/ArcLfuSection.h:199:39: note:   ‘std::weak_ptr<cache_set::ArcCacheNode<int, std::__cxx11::basic_string<char> > >’ is not derived from ‘const std::shared_ptr<_Tp>’
+  199 |             node ->_next->_pre.lock() = node -> _pre;
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+In file included from /usr/include/c++/11/memory:77,
+                 from /home/yhy/code/c++/Caching system/testAllCachePolicy.cpp:3:
+/usr/include/c++/11/bits/shared_ptr.h:374:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::auto_ptr<_Up> > std::shared_ptr<_Tp>::operator=(std::auto_ptr<_Up>&&) [with _Yp = _Yp; _Tp = cache_set::ArcCacheNode<int, std::__cxx11::basic_string<char> >]’
+  374 |         operator=(auto_ptr<_Yp>&& __r)
+      |         ^~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:374:9: note:   template argument deduction/substitution failed:
+In file included from /home/yhy/code/c++/Caching system/./ArcCache/ArcCache.h:8,
+                 from /home/yhy/code/c++/Caching system/testAllCachePolicy.cpp:18:
+/home/yhy/code/c++/Caching system/./ArcCache/ArcLfuSection.h:199:39: note:   ‘std::weak_ptr<cache_set::ArcCacheNode<int, std::__cxx11::basic_string<char> > >’ is not derived from ‘std::auto_ptr<_Up>’
+  199 |             node ->_next->_pre.lock() = node -> _pre;
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+In file included from /usr/include/c++/11/memory:77,
+                 from /home/yhy/code/c++/Caching system/testAllCachePolicy.cpp:3:
+/usr/include/c++/11/bits/shared_ptr.h:391:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::shared_ptr<_Yp> > std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Yp>&&) [with _Yp = _Yp; _Tp = cache_set::ArcCacheNode<int, std::__cxx11::basic_string<char> >]’
+  391 |         operator=(shared_ptr<_Yp>&& __r) noexcept
+      |         ^~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:391:9: note:   template argument deduction/substitution failed:
+In file included from /home/yhy/code/c++/Caching system/./ArcCache/ArcCache.h:8,
+                 from /home/yhy/code/c++/Caching system/testAllCachePolicy.cpp:18:
+/home/yhy/code/c++/Caching system/./ArcCache/ArcLfuSection.h:199:39: note:   ‘std::weak_ptr<cache_set::ArcCacheNode<int, std::__cxx11::basic_string<char> > >’ is not derived from ‘std::shared_ptr<_Tp>’
+  199 |             node ->_next->_pre.lock() = node -> _pre;
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+In file included from /usr/include/c++/11/memory:77,
+                 from /home/yhy/code/c++/Caching system/testAllCachePolicy.cpp:3:
+/usr/include/c++/11/bits/shared_ptr.h:399:9: note: candidate: ‘template<class _Yp, class _Del> std::shared_ptr<_Tp>::_Assignable<std::unique_ptr<_Up, _Ep> > std::shared_ptr<_Tp>::operator=(std::unique_ptr<_Up, _Ep>&&) [with _Yp = _Yp; _Del = _Del; _Tp = cache_set::ArcCacheNode<int, std::__cxx11::basic_string<char> >]’
+  399 |         operator=(unique_ptr<_Yp, _Del>&& __r)
+      |         ^~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:399:9: note:   template argument deduction/substitution failed:
+In file included from /home/yhy/code/c++/Caching system/./ArcCache/ArcCache.h:8,
+                 from /home/yhy/code/c++/Caching system/testAllCachePolicy.cpp:18:
+/home/yhy/code/c++/Caching system/./ArcCache/ArcLfuSection.h:199:39: note:   ‘std::weak_ptr<cache_set::ArcCacheNode<int, std::__cxx11::basic_string<char> > >’ is not derived from ‘std::unique_ptr<_Tp, _Dp>’
+  199 |             node ->_next->_pre.lock() = node -> _pre;
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+In file included from /usr/include/c++/11/memory:77,
+                 from /home/yhy/code/c++/Caching system/testAllCachePolicy.cpp:3:
+/usr/include/c++/11/bits/shared_ptr.h:359:19: note: candidate: ‘std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Tp>&) [with _Tp = cache_set::ArcCacheNode<int, std::__cxx11::basic_string<char> >]’
+  359 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;
+      |                   ^~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:359:29: note:   no known conversion for argument 1 from ‘std::weak_ptr<cache_set::ArcCacheNode<int, std::__cxx11::basic_string<char> > >’ to ‘const std::shared_ptr<cache_set::ArcCacheNode<int, std::__cxx11::basic_string<char> > >&’
+  359 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;
+      |                             ^~~~~~~~~~~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:383:7: note: candidate: ‘std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Tp>&&) [with _Tp = cache_set::ArcCacheNode<int, std::__cxx11::basic_string<char> >]’
+  383 |       operator=(shared_ptr&& __r) noexcept
+      |       ^~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:383:30: note:   no known conversion for argument 1 from ‘std::weak_ptr<cache_set::ArcCacheNode<int, std::__cxx11::basic_string<char> > >’ to ‘std::shared_ptr<cache_set::ArcCacheNode<int, std::__cxx11::basic_string<char> > >&&’
+  383 |       operator=(shared_ptr&& __r) noexcept
+      |                 ~~~~~~~~~~~~~^~~
+In file included from /home/yhy/code/c++/Caching system/./ArcCache/ArcCache.h:9,
+                 from /home/yhy/code/c++/Caching system/testAllCachePolicy.cpp:18:
+/home/yhy/code/c++/Caching system/./ArcCache/ArcLruSection.h: In instantiation of ‘void cache_set::ArcLruSection<Key, Value>::evict_least_from_substance() [with Key = int; Value = std::__cxx11::basic_string<char>]’:
+/home/yhy/code/c++/Caching system/./ArcCache/ArcLruSection.h:91:13:   required from ‘bool cache_set::ArcLruSection<Key, Value>::decrease_capacity() [with Key = int; Value = std::__cxx11::basic_string<char>]’
+/home/yhy/code/c++/Caching system/./ArcCache/ArcCache.h:72:45:   required from ‘bool cache_set::ArcCache<Key, Value>::check_ghost_cache(Key) [with Key = int; Value = std::__cxx11::basic_string<char>]’
+/home/yhy/code/c++/Caching system/./ArcCache/ArcCache.h:26:9:   required from ‘void cache_set::ArcCache<Key, Value>::put(Key, Value) [with Key = int; Value = std::__cxx11::basic_string<char>]’
+/home/yhy/code/c++/Caching system/./ArcCache/ArcCache.h:24:10:   required from here
+/home/yhy/code/c++/Caching system/./ArcCache/ArcLruSection.h:161:35: error: ‘std::unordered_map<int, std::shared_ptr<cache_set::ArcCacheNode<int, std::__cxx11::basic_string<char> > >, std::hash<int>, std::equal_to<int>, std::allocator<std::pair<const int, std::shared_ptr<cache_set::ArcCacheNode<int, std::__cxx11::basic_string<char> > > > > >::mapped_type’ {aka ‘class std::shared_ptr<cache_set::ArcCacheNode<int, std::__cxx11::basic_string<char> > >’} has no member named ‘erase’
+  161 |         lru_list[node->get_key()].erase();
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+make[2]: *** [CMakeFiles/main.dir/build.make:90：CMakeFiles/main.dir/testAllCachePolicy.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:83：CMakeFiles/main.dir/all] 错误 2
+make: *** [Makefile:91：all] 错误 2
